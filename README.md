@@ -7,49 +7,52 @@ Aplicación desarrollada en Python que permite controlar el cursor del computado
 
 ## ⚙️ Tecnologías utilizadas
 - Python  
-- OpenCV (procesamiento de imágenes)  
-- MediaPipe (detección de manos y gestos)  
-- PyAutoGUI (control del cursor)  
+- OpenCV  
+- MediaPipe  
+- PyAutoGUI  
+
+---
+
+## 🐍 Versión de Python recomendada
+- **Python 3.10 ✅**
 
 ---
 
 ## 🚀 Funcionalidades
-- Detección de la mano en tiempo real mediante cámara  
-- Seguimiento de los movimientos de la mano  
-- Control del cursor en pantalla  
-- Simulación de clic izquierdo y derecho  
-- Función de arrastrar y seleccionar  
-- Interacción sin necesidad de dispositivos físicos  
+- Detección de la mano en tiempo real  
+- Control del cursor con movimientos  
+- Clic izquierdo y derecho  
+- Arrastrar y seleccionar  
+- Interacción sin mouse físico  
 
 ---
 
 ## 🔧 Instalación
-Instalar las dependencias necesarias:
+
+Instalar dependencias necesarias:
 
 ```bash
-pip install opencv-python mediapipe pyautogui
+pip install opencv-python pyautogui
+pip uninstall mediapipe
+pip install mediapipe==0.10.8
 ```
 ## ▶️ Ejecución
 
 Ejecutar el programa con:
 
 ```bash
-python main.py
+python SeguimientoManos.py
 ```
 ## 🧩 Cómo funciona
 
-El sistema utiliza la librería **MediaPipe** para detectar puntos clave de la mano en tiempo real a través de la cámara.  
+Se detectan los puntos clave de la mano en tiempo real usando MediaPipe.
 
-Luego, con **OpenCV**, se procesan las imágenes capturadas para interpretar los movimientos.  
+OpenCV procesa la imagen de la cámara y calcula posiciones.
 
-Estos movimientos se traducen en acciones del cursor mediante **PyAutoGUI**, permitiendo mover el puntero, hacer clic y realizar otras funciones básicas.  
-
-El sistema está optimizado para trabajar en tiempo real, brindando una interacción fluida entre el usuario y el computador.
+Los movimientos se convierten en acciones del mouse mediante PyAutoGUI.
 
 ---
 
 ## 💡 Valor del proyecto
 
-Este proyecto ofrece una alternativa innovadora de interacción humano-computadora, mejorando la accesibilidad para personas con limitaciones físicas y eliminando la dependencia de dispositivos tradicionales como el mouse.  
-
-Además, aporta al desarrollo de interfaces más naturales e intuitivas basadas en visión artificial.
+Permite controlar el computador sin mouse físico, mejorando la accesibilidad e introduciendo interacción basada en gestos.
